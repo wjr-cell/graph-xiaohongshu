@@ -1,5 +1,23 @@
 # AI 内容运营助手
 
+## 📸 项目截图
+
+<p align="center">
+  <img src="./屏幕截图%202026-10-17%20123628.png" width="48%" />
+  <img src="./屏幕截图%202026-10-17%20175102.png" width="48%" />
+</p>
+
+<p align="center">
+  <img src="./屏幕截图%202026-10-17%20175154.png" width="48%" />
+  <img src="./屏幕截图%202026-10-17%20175209.png" width="48%" />
+</p>
+
+<p align="center">
+  <img src="./屏幕截图%202026-10-17%20175431.png" width="80%" />
+</p>
+
+## 项目介绍
+
 基于 LangGraph 1.0+ 和 FastAPI 的自动化内容生成工作流（含 Vue 前端）。
 
 ## 功能特性
@@ -243,6 +261,3 @@ Content-Type: application/json
 3. **状态持久化**: LangGraph Checkpointer 会自动创建所需表结构
 4. **生成图片**: 保存在 `static/images/generated/`，已加入 `.gitignore`
 
-## License
-
-MIT
