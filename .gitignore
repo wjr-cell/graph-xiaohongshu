@@ -92,3 +92,9 @@ Desktop.ini
 *.db
 *.sqlite
 *.sqlite3
+
+# ===================
+# 运行时生成文件
+# ===================
+static/images/generated/*
+!static/images/generated/.gitkeep

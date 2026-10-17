@@ -1,14 +1,14 @@
 """
 FastAPI 应用入口
-AI 内容运营助手后端服务 (v1.1 - 添加日志系统)
+AI 内容运营助手后端服务
 """
 import sys
 from pathlib import Path
 
-# 确保 backend 目录在 Python 路径中
-backend_dir = Path(__file__).resolve().parent.parent
-if str(backend_dir) not in sys.path:
-    sys.path.insert(0, str(backend_dir))
+# 确保项目根目录在 Python 路径中（支持 python -m app.main）
+_project_root = Path(__file__).resolve().parent.parent
+if str(_project_root) not in sys.path:
+    sys.path.insert(0, str(_project_root))
 
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
@@ -25,6 +25,8 @@ from app.graph.utils import setup_checkpointer, close_checkpointer
 from app.api.v1.workflow import router as workflow_router
 from app.api.v1.image import router as image_router
 from app.api.v1.auth import router as auth_router
+# 确保 User 模型注册到 Base，init_db() 才能建表
+from app.models import User  # noqa: F401
 
 # 初始化日志系统（在导入其他模块之前）
 setup_logging(

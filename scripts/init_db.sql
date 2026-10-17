@@ -9,18 +9,18 @@
 --      psql -h localhost -U postgres
 --   
 --   2. 创建数据库:
---      CREATE DATABASE aicontent;
+--      CREATE DATABASE langgraph_db;
 --   
 --   3. 连接到新数据库:
---      \c aicontent
+--      \c langgraph_db
 --   
---   4. 运行此脚本（可选，LangGraph 会自动创建表）:
+--   4. 运行此脚本（可选，应用启动时也会自动建表）:
 --      \i scripts/init_db.sql
 --
 -- 方法2: 使用 pgAdmin 或其他 GUI 工具
 --   1. 连接到 PostgreSQL 服务器
 --   2. 右键点击 "Databases" -> "Create" -> "Database"
---   3. 输入数据库名: aicontent
+--   3. 输入数据库名: langgraph_db
 --   4. 点击 "Save"
 --
 -- ============================================================
@@ -61,7 +61,7 @@ CREATE INDEX IF NOT EXISTS idx_users_username ON users(username);
 -- ============================================================
 -- 
 -- .env 文件中的数据库配置：
--- POSTGRES_URI=postgresql://postgres:password@localhost:5432/aicontent
+-- POSTGRES_URI=postgresql://postgres:password@localhost:5432/langgraph_db
 --
 -- 如果你的 PostgreSQL 配置不同，请修改 .env 文件中的连接字符串
 -- 
