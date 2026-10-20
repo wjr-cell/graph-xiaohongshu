@@ -38,7 +38,7 @@
 ## 技术栈
 
 - **Python 3.12**（conda 环境 `xiaohongshu`）
-- **FastAPI** / **LangGraph 1.0+** / **PostgreSQL** / **SQLAlchemy**
+- **FastAPI** / **LangGraph 1.0+** / **PostgreSQL**
 - **Vue 3** + **Vite**（前端）
 
 ## 快速开始
